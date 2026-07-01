@@ -1,17 +1,16 @@
 import { Usuario } from "./usuario";
 
-export class Administrador extends Usuario {
-
+export class Admin extends Usuario {
     constructor(
         id: number,
         nombre: string,
-        correo: string,
+        email: string,
+        private rol: string
     ) {
-        super(id, nombre, correo);
-    }
-    public getId(): number {
-        return this.id;
+        super(id, nombre, email);
     }
 
-    public mostrarInformacion(): void {}
+    public obtenerInfo(): string {
+        return `[Admin] ID: ${this.id} | Nombre: ${this.nombre} | Email: ${this.email} | Rol: ${this.rol}`;
+    }
 }
