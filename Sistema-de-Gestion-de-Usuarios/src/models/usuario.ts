@@ -1,5 +1,4 @@
 export abstract class Usuario {
-
     constructor(
         protected id: number,
         protected nombre: string,
@@ -10,6 +9,5 @@ export abstract class Usuario {
         return this.id;
     }
 
-    public abstract mostrarInformacion(): void;
-
+    public abstract obtenerInfo(): string;
 }
