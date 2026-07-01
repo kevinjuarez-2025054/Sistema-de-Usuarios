@@ -1,19 +1,16 @@
 import { Usuario } from "./usuario";
 
 export class Cliente extends Usuario {
-
     constructor(
         id: number,
         nombre: string,
         email: string,
-        private rol: string
+        private telefono: string
     ) {
         super(id, nombre, email);
     }
 
-
-    mostrarInformacion(): void {
-        console.log(`ID: ${this.getId()}, Nombre: ${this.nombre}, Email: ${this.email}, Rol: ${this.rol}`);
+    public obtenerInfo(): string {
+        return `[Cliente] ID: ${this.id} | Nombre: ${this.nombre} | Email: ${this.email} | Tel: ${this.telefono}`;
     }
-
 }
